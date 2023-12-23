@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=============================== Tier 3: Hi-tech research bench ===================================-->
+	
+  <ResearchProjectDef>
+    <defName>WDAdvancedMortars</defName>
+    <label>advanced mortars</label>
+    <description>Build advanced mortars.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Mortars</li>
+    </prerequisites>
+    <researchViewX>9</researchViewX>
+    <researchViewY>4.8</researchViewY>
+  </ResearchProjectDef>	
+	
+	<ResearchProjectDef>
+		<defName>WDLongRangeCannons</defName>
+		<label>long range cannons</label>
+		<description>Learn to build long range cannons which can lob shells long distances over walls. More accurate and effective than mortars.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>WDAdvancedMortars</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<researchViewX>11</researchViewX>
+		<researchViewY>5.25</researchViewY>
+	</ResearchProjectDef>	
+
+</Defs>

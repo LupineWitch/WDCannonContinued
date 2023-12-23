@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [defName = "Turret_Mortar"]/uiIconPath</xpath>
+		<value>
+			<uiIconPath>Things/Building/Security/WDTurretMortar_MenuIcon</uiIconPath>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [defName = "Artillery_Mortar"]/graphicData/texPath</xpath>
+		<value>
+			<texPath>Things/Building/Security/WDTurretMortar_Top</texPath>
+		</value>
+	</Operation>
+<!-- 
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [@Name = "BaseArtilleryBuilding"]/costStuffCount</xpath>
+		<value>
+            <costStuffCount>50</costStuffCount>
+		</value>
+	</Operation>	
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [@Name = "BaseArtilleryBuilding"]/costList</xpath>
+		<value>
+			<costList>
+				<Steel>70</Steel>
+				<ComponentIndustrial>3</ComponentIndustrial>
+			</costList>
+		</value>
+	</Operation>	 -->
+	
+	<!-- <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [defName = "Artillery_Mortar"]/verbs/li/forcedMissRadius</xpath>
+		<value>
+			<forcedMissRadius>10</forcedMissRadius>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef [defName = "Turret_Mortar"]/building</xpath>
+		<value>
+			<turretBurstWarmupTime>2.0</turretBurstWarmupTime>
+			<turretBurstCooldownTime>28.0</turretBurstCooldownTime>	
+		</value>
+	</Operation>	 -->
+	
+</Patch>
+

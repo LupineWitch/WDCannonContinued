@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="WDBaseArtilleryBuilding">
+    <defName>Turret_WDMortarAdvanced</defName>
+    <label>advanced mortar</label>
+    <description>A manned mortar that launches all kinds of shells. Has higher accuracy and reloading speed, but more expencive than normal mortars.</description>
+    <uiIconPath>Things/Building/Security/WDTurretAdvancedMortar_MenuIcon</uiIconPath>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>4.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Shots until barrel change</fuelLabel>
+        <fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+        <outOfFuelMessage>Needs new reinforced barrel</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>ReinforcedBarrel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelIsMortarBarrel>true</fuelIsMortarBarrel>
+        <fuelCapacity>20</fuelCapacity>
+        <fuelMultiplier>20</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <initialAllowAutoRefuel>true</initialAllowAutoRefuel>
+        <autoRefuelPercent>0</autoRefuelPercent>
+        <fuelIconPath>Things/Item/Resource/ReinforcedBarrel/ReinforcedBarrel</fuelIconPath>
+      </li>
+    </comps>
+    <costStuffCount>60</costStuffCount>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <costListForDifficulty>
+      <difficultyVar>classicMortars</difficultyVar>
+      <invert>true</invert>
+      <costList>
+        <ComponentIndustrial>6</ComponentIndustrial>
+        <ReinforcedBarrel>1</ReinforcedBarrel>
+      </costList>
+      <costStuffCount>50</costStuffCount>
+    </costListForDifficulty>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>2500</WorkToBuild>
+      <Mass>30</Mass>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <building>
+      <turretBurstWarmupTime>2.0</turretBurstWarmupTime>
+      <turretBurstCooldownTime>20.0</turretBurstCooldownTime>
+      <turretGunDef>Artillery_WDMortarAdvanced</turretGunDef>
+      <buildingTags>
+        <li>Artillery_BaseDestroyer</li>
+        <li>Artillery_MannedMortar</li>
+      </buildingTags>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <researchPrerequisites>
+      <li>WDAdvancedMortars</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="WDBaseArtilleryWeapon">
+    <defName>Artillery_WDMortarAdvanced</defName>
+    <label>advanced mortar</label>
+    <description>A manned mortar that launches all kinds of shells. Has higher accuracy and reloading speed, but more expencive than normal mortars.</description>
+    <recoilPower>3</recoilPower>
+    <graphicData>
+      <texPath>Things/Building/Security/WDTurretAdvancedMortar_Top</texPath>
+    </graphicData>
+    <weaponTags>
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>2.0</warmupTime>
+        <forcedMissRadius>4.9</forcedMissRadius>
+        <forcedMissRadiusClassicMortars>7.4</forcedMissRadiusClassicMortars>
+        <isMortar>true</isMortar>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>29.9</minRange>
+        <range>600</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>16</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_ChangeableProjectile" />
+    </comps>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>MortarShells</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>MortarShells</li>
+          </categories>
+          <disallowedThingDefs>
+            <li>Shell_Firefoam</li>
+            <li>Shell_AntigrainWarhead</li>
+          </disallowedThingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+
+</Defs>

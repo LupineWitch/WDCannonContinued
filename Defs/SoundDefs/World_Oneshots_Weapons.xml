@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>Shot_WDLongRangeCannon</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Artillery/LongRangeCannonShot</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>50</min>
+          <max>60</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Shot_WDCannon</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Artillery/CannonShot</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>50</min>
+          <max>60</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>  

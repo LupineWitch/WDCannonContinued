@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>Wemd.ExpandedArtillery.Continiued</packageId>
+	<name>[WD] Expanded Artillery Continiued</name>
+	<description>A big content mod. Adds 3 new types of mortars and cannons, reasearches and recipes for them.\nOrginally developed by Wemd, updated by LupineWitch. All rights and assets belong to the original author.\nOriginal was removed from workshop. This will be unlisted and deleted on request of the original author. \nContact me on discord: @lupinewitch\n\nUpdated: 23.12.2023</description>
+	<author>Wemd</author>
+    <supportedVersions>
+    <li>1.4</li>
+    </supportedVersions>
+</ModMetaData>

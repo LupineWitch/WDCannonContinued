@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [@Name = "ShellBase"]/statBases/MarketValue</xpath>
+		<value>
+			<MarketValue>60</MarketValue>
+		</value>
+	</Operation>	
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef [defName = "Shell_Firefoam"]/graphicData/texPath</xpath>
+		<value>
+            <texPath>Things/Item/Resource/Shell/ShellsMortar/Shell_MortarFirefoam</texPath>
+		</value>
+	</Operation>	
+	
+</Patch>
+
